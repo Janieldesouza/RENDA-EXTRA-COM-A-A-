@@ -1,0 +1,799 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Açaí Que Dá Dinheiro - Ganhe Renda Extra</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Nunito', sans-serif;
+            color: #ffffff;
+            background: linear-gradient(135deg, #2d0a4e, #1a0a1e);
+            overflow-x: hidden;
+            min-height: 100vh;
+        }
+
+        /* SEÇÃO HERO */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 60px 24px 48px;
+            position: relative;
+            background: radial-gradient(90% 55% at 50% -10%, rgba(124, 58, 237, 0.27), transparent 65%), 
+                        radial-gradient(50% 40% at 85% 90%, rgba(245, 166, 35, 0.13), transparent 60%);
+            overflow: hidden;
+        }
+
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background-color: #f5a623;
+            color: #2d0a4e;
+            font-weight: 900;
+            font-size: 0.72rem;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            padding: 6px 18px;
+            border-radius: 999px;
+            margin-bottom: 28px;
+        }
+
+        h1 {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: clamp(2.4rem, 8vw, 6rem);
+            line-height: 1.05;
+            letter-spacing: 0.02em;
+            color: #ffffff;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
+
+        h1 em {
+            font-style: normal;
+            color: #f5a623;
+        }
+
+        .hero-subtitle {
+            font-family: 'Nunito', sans-serif;
+            font-size: clamp(1rem, 2.8vw, 1.3rem);
+            font-weight: 600;
+            color: #d8b4fe;
+            max-width: 640px;
+            margin: 22px auto 14px;
+            line-height: 1.65;
+        }
+
+        .proof {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 36px;
+            color: #a78bfa;
+            font-size: 0.9rem;
+            font-weight: 700;
+        }
+
+        .proof span {
+            color: #f5a623;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(135deg, #16a34a, #22c55e);
+            color: #ffffff;
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: clamp(1.2rem, 3vw, 1.6rem);
+            letter-spacing: 0.08em;
+            padding: 18px 52px;
+            border-radius: 8px;
+            text-decoration: none;
+            border: none;
+            cursor: pointer;
+            box-shadow: 0px 8px 40px rgba(34, 197, 94, 0.27);
+            margin-top: 32px;
+            transition: all 0.3s ease;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0px 14px 40px rgba(34, 197, 94, 0.47);
+        }
+
+        /* VSL WRAPPER */
+        .vsl-wrapper {
+            width: 100%;
+            max-width: 700px;
+            margin: 36px auto 0;
+            border: 3px solid #8b2fc9;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0px 0px 60px rgba(139, 47, 201, 0.33);
+        }
+
+        .video-placeholder {
+            width: 100%;
+            aspect-ratio: 16/9;
+            background: rgb(8, 0, 26);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            gap: 16px;
+            color: #6d28d9;
+        }
+
+        .video-placeholder-icon {
+            font-size: 4rem;
+            opacity: 0.5;
+        }
+
+        .video-placeholder-text {
+            font-size: 1rem;
+            font-weight: 700;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+        }
+
+        /* SEÇÃO DE PROBLEMAS */
+        .section {
+            width: 100%;
+            padding: 72px 24px;
+            text-align: center;
+        }
+
+        .section.dark {
+            background-color: rgb(22, 2, 48);
+        }
+
+        .section.light {
+            background-color: rgb(45, 10, 78);
+        }
+
+        .section.gradient {
+            background: linear-gradient(135deg, rgb(22, 2, 48), rgb(45, 10, 78));
+        }
+
+        .label {
+            font-size: 0.75rem;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: #f5a623;
+            font-weight: 700;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        .section-title {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: clamp(2rem, 5.5vw, 4rem);
+            line-height: 1.05;
+            margin-bottom: 14px;
+            color: #ffffff;
+        }
+
+        .section-title em {
+            font-style: normal;
+            color: #f5a623;
+        }
+
+        .section-subtitle {
+            font-family: 'Nunito', sans-serif;
+            color: #c4b5fd;
+            font-size: 1.05rem;
+            max-width: 540px;
+            margin: 0 auto 44px;
+            line-height: 1.65;
+        }
+
+        .pain-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+            max-width: 900px;
+            margin: 44px auto 0;
+        }
+
+        .pain-card {
+            background-color: rgba(255, 50, 50, 0.07);
+            border: 1px solid rgba(239, 68, 68, 0.25);
+            border-radius: 14px;
+            padding: 24px 20px;
+            transition: all 0.2s ease;
+        }
+
+        .pain-card:hover {
+            border-color: rgb(239, 68, 68);
+            transform: translateY(-4px);
+        }
+
+        .pain-card-icon {
+            font-size: 2rem;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        .pain-card p {
+            color: rgb(252, 165, 165);
+            font-size: 0.92rem;
+            line-height: 1.6;
+        }
+
+        .solution-box {
+            max-width: 740px;
+            margin: 44px auto 0;
+            background-color: rgba(139, 47, 201, 0.12);
+            border: 1.5px solid rgba(139, 47, 201, 0.4);
+            border-radius: 20px;
+            padding: 44px 36px;
+        }
+
+        .solution-box p {
+            font-size: 1.1rem;
+            line-height: 1.75;
+            color: rgb(233, 213, 255);
+            margin-bottom: 16px;
+        }
+
+        .solution-box p:last-child {
+            margin-bottom: 0;
+        }
+
+        .solution-box strong {
+            color: #f5a623;
+        }
+
+        /* GRID DE DEPOIMENTOS */
+        .depo-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 22px;
+            max-width: 880px;
+            margin: 44px auto 0;
+        }
+
+        .depo-card {
+            background-color: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 16px;
+            padding: 26px 22px;
+            text-align: left;
+            transition: all 0.2s ease;
+        }
+
+        .stars {
+            color: #f5a623;
+            font-size: 1.4rem;
+            margin-bottom: 6px;
+            display: block;
+        }
+
+        .depo-text {
+            color: rgb(233, 213, 255);
+            font-size: 0.92rem;
+            line-height: 1.7;
+            font-style: italic;
+            margin-bottom: 14px;
+        }
+
+        .author {
+            font-weight: 700;
+            color: rgb(251, 191, 36);
+            font-size: 0.85rem;
+        }
+
+        /* SEÇÃO DE OFERTA */
+        .offer-section {
+            background: linear-gradient(135deg, rgb(30, 4, 56), rgb(59, 7, 100));
+            padding: 80px 24px;
+            text-align: center;
+        }
+
+        .offer-box {
+            max-width: 600px;
+            margin: 48px auto 0;
+            background-color: rgba(255, 255, 255, 0.04);
+            border: 2px solid #f5a623;
+            border-radius: 24px;
+            padding: 48px 36px;
+            box-shadow: 0px 0px 70px rgba(245, 166, 35, 0.13);
+        }
+
+        .offer-block {
+            background-color: rgba(255, 255, 255, 0.04);
+            border: 1px solid rgba(139, 47, 201, 0.3);
+            border-radius: 14px;
+            padding: 24px 20px;
+            margin-bottom: 20px;
+            text-align: left;
+        }
+
+        .bonus-block {
+            background-color: rgba(245, 166, 35, 0.06);
+            border-color: rgba(245, 166, 35, 0.3);
+        }
+
+        .block-title {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 1.2rem;
+            letter-spacing: 0.06em;
+            color: #ffffff;
+            margin-bottom: 16px;
+            display: block;
+        }
+
+        .bonus-title {
+            color: #f5a623;
+        }
+
+        .price-value {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: clamp(3.5rem, 10vw, 6rem);
+            color: #f5a623;
+            line-height: 1;
+            margin-bottom: 8px;
+        }
+
+        .price-label {
+            color: rgb(233, 213, 255);
+            font-size: 1rem;
+            font-weight: 700;
+            margin-bottom: 12px;
+            display: block;
+        }
+
+        .price-info {
+            color: rgb(196, 181, 253);
+            font-size: 0.85rem;
+            display: block;
+            margin-bottom: 36px;
+        }
+
+        .check-list {
+            list-style: none;
+            text-align: left;
+            margin-bottom: 36px;
+        }
+
+        .check-list li {
+            padding: 10px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+            color: rgb(233, 213, 255);
+            font-size: 0.93rem;
+            display: flex;
+            gap: 10px;
+            align-items: flex-start;
+        }
+
+        .check-list li:last-child {
+            border-bottom: none;
+        }
+
+        .check-icon {
+            color: #22c55e;
+            font-size: 1.05rem;
+            flex-shrink: 0;
+        }
+
+        .check-list li strong {
+            color: #ffffff;
+            font-size: 0.95rem;
+            display: block;
+            margin-bottom: 2px;
+        }
+
+        .item-desc {
+            color: rgb(167, 139, 250);
+            font-size: 0.82rem;
+            line-height: 1.5;
+            margin-top: 2px;
+            display: block;
+        }
+
+        /* FAQ */
+        .faq-section {
+            background-color: rgb(30, 4, 56);
+            padding: 80px 24px;
+        }
+
+        .faq-inner {
+            max-width: 680px;
+            margin: 44px auto 0;
+        }
+
+        .faq-item {
+            border-bottom: 1px solid rgba(139, 47, 201, 0.35);
+        }
+
+        .faq-question {
+            width: 100%;
+            background: none;
+            border: none;
+            padding: 20px 0;
+            cursor: pointer;
+            font-weight: 700;
+            font-size: 0.97rem;
+            color: #ffffff;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            text-align: left;
+            font-family: 'Nunito', sans-serif;
+        }
+
+        .faq-icon {
+            color: #f5a623;
+            font-size: 1.4rem;
+            flex-shrink: 0;
+            transition: transform 0.2s ease;
+        }
+
+        .faq-item.open .faq-icon {
+            transform: rotate(45deg);
+        }
+
+        .faq-answer {
+            display: none;
+            padding-bottom: 20px;
+            color: rgb(196, 181, 253);
+            font-size: 0.92rem;
+            line-height: 1.7;
+        }
+
+        .faq-item.open .faq-answer {
+            display: block;
+        }
+
+        /* FINAL CTA */
+        .final-cta {
+            background: linear-gradient(135deg, rgb(45, 10, 78), rgb(22, 2, 48));
+            padding: 80px 24px;
+            text-align: center;
+        }
+
+        .final-cta h2 {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: clamp(2.2rem, 7vw, 5rem);
+            line-height: 1.05;
+            margin-bottom: 18px;
+            color: #ffffff;
+        }
+
+        .final-cta h2 em {
+            font-style: normal;
+            color: #f5a623;
+        }
+
+        .final-cta p {
+            color: rgb(196, 181, 253);
+            margin-bottom: 36px;
+            font-size: 1.05rem;
+            max-width: 480px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* STICKY BAR */
+        .sticky-bar {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: rgba(20, 4, 40, 0.97);
+            border-top: 2px solid #f5a623;
+            padding: 12px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 12px;
+            z-index: 999;
+        }
+
+        .sticky-text {
+            font-weight: 700;
+            font-size: 0.9rem;
+            color: rgb(233, 213, 255);
+        }
+
+        .sticky-text span {
+            color: #f5a623;
+        }
+
+        .sticky-btn {
+            background: linear-gradient(135deg, #f5a623, #ff6b1a);
+            color: #2d0a4e;
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 1.05rem;
+            letter-spacing: 0.07em;
+            padding: 10px 28px;
+            border-radius: 6px;
+            border: none;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            transition: transform 0.15s ease;
+        }
+
+        .sticky-btn:hover {
+            transform: scale(1.04);
+        }
+
+        /* FOOTER */
+        footer {
+            background-color: rgb(6, 0, 15);
+            padding: 24px;
+            text-align: center;
+            color: rgb(107, 114, 128);
+            font-size: 0.8rem;
+        }
+
+        /* RESPONSIVO */
+        @media (max-width: 480px) {
+            .sticky-bar {
+                justify-content: center;
+            }
+
+            .offer-box {
+                padding: 32px 20px;
+            }
+
+            .section {
+                padding: 60px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- HERO SECTION -->
+    <section class="hero">
+        <span class="badge">⭐ OFERTA LIMITADA</span>
+        <h1>GANHE <em>RENDA EXTRA</em><br>COM AÇAÍ</h1>
+        <p class="hero-subtitle">Descubra o sistema comprovado para ganhar dinheiro vendendo açaí. Sem experiência necessária!</p>
+        
+        <div class="proof">
+            <span>✓ Mais de 5.000 alunos</span>
+            <span>✓ Taxa de sucesso de 94%</span>
+        </div>
+
+        <button class="cta-button" onclick="document.querySelector('.offer-box').scrollIntoView({behavior: 'smooth'})">
+            ➤ QUERO GANHAR AGORA
+        </button>
+
+        <!-- VIDEO SALES LETTER -->
+        <div class="vsl-wrapper">
+            <script src="https://fast.wistia.com/player.js" async></script>
+            <script src="https://fast.wistia.com/embed/bqc6ltk1l3.js" async type="module"></script>
+            <style>wistia-player[media-id='bqc6ltk1l3']:not(:defined) { background: center / contain no-repeat url('https://fast.wistia.com/embed/medias/bqc6ltk1l3/swatch'); display: block; filter: blur(5px); padding-top:168.89%; }</style>
+            <wistia-player media-id="bqc6ltk1l3" aspect="0.5921052631578947"></wistia-player>
+        </div>
+    </section>
+
+    <!-- SEÇÃO DE PROBLEMAS -->
+    <section class="section dark">
+        <span class="label">O PROBLEMA</span>
+        <h2 class="section-title">Você está <em>cansado</em> de ganhar pouco?</h2>
+        <p class="section-subtitle">Milhares de pessoas como você buscam uma forma legítima de ganhar renda extra sem arriscar seu patrimônio</p>
+
+        <div class="pain-grid">
+            <div class="pain-card">
+                <span class="pain-card-icon">😩</span>
+                <p>Cansado de trabalhar 8 horas por dia por um salário que não cresce</p>
+            </div>
+            <div class="pain-card">
+                <span class="pain-card-icon">💸</span>
+                <p>Precisa de dinheiro extra mas não sabe por onde começar</p>
+            </div>
+            <div class="pain-card">
+                <span class="pain-card-icon">🎯</span>
+                <p>Quer um negócio que funciona de verdade sem enganações</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- SEÇÃO DE SOLUÇÃO -->
+    <section class="section light">
+        <span class="label">A SOLUÇÃO</span>
+        <h2 class="section-title">Sistema <em>Açaí</em> que Dá Dinheiro</h2>
+        <p class="section-subtitle">Um método passo a passo que você aprende e começa a ganhar em 7 dias</p>
+
+        <div class="solution-box">
+            <p>Você vai aprender <strong>exatamente como</strong> montar um ponto de venda, gerenciar clientes, aumentar suas vendas e ganhar entre <strong>R$2.000 a R$5.000 por mês</strong> com açaí.</p>
+            <p>Tudo isso <strong>do seu próprio ritmo</strong>, começando com pouco investimento inicial e crescendo gradualmente. Você terá acesso a:</p>
+            <p>✓ Passo a passo completo<br>
+            ✓ Listas de fornecedores confiáveis<br>
+            ✓ Templates prontos para usar<br>
+            ✓ Suporte direto com especialistas</p>
+        </div>
+    </section>
+
+    <!-- DEPOIMENTOS -->
+    <section class="section dark">
+        <span class="label">RESULTADOS REAIS</span>
+        <h2 class="section-title">Veja o que <em>nossos alunos</em> conquistaram</h2>
+
+        <div class="depo-grid">
+            <div class="depo-card">
+                <span class="stars">⭐⭐⭐⭐⭐</span>
+                <p class="depo-text">"Comecei do zero e em 3 meses já estava faturando R$4.000 por mês. O curso é incrivelmente prático!"</p>
+                <span class="author">- Mariana S., São Paulo</span>
+            </div>
+            <div class="depo-card">
+                <span class="stars">⭐⭐⭐⭐⭐</span>
+                <p class="depo-text">"Finalmente encontrei uma forma legítima de ganhar dinheiro extra. Recomendo demais!"</p>
+                <span class="author">- Carlos M., Rio de Janeiro</span>
+            </div>
+            <div class="depo-card">
+                <span class="stars">⭐⭐⭐⭐⭐</span>
+                <p class="depo-text">"Não acreditava que era tão simples. Agora tenho renda passiva de verdade!"</p>
+                <span class="author">- Ana P., Minas Gerais</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- OFERTA -->
+    <section class="offer-section">
+        <span class="label">OFERTA ESPECIAL</span>
+        <h2 class="section-title">Seu Investimento <em>Hoje</em></h2>
+
+        <div class="offer-box">
+            <div class="offer-block">
+                <span class="block-title">O QUE VOCÊ RECEBE:</span>
+                <ul class="check-list">
+                    <li>
+                        <span class="check-icon">✓</span>
+                        <div>
+                            <strong>Módulo 1 - Fundamentos</strong>
+                            <span class="item-desc">Aprenda os segredos do negócio</span>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="check-icon">✓</span>
+                        <div>
+                            <strong>Módulo 2 - Prática</strong>
+                            <span class="item-desc">Passo a passo para começar</span>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="check-icon">✓</span>
+                        <div>
+                            <strong>Templates Prontos</strong>
+                            <span class="item-desc">Cardápios, planilhas e mais</span>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="check-icon">✓</span>
+                        <div>
+                            <strong>Suporte Vitalício</strong>
+                            <span class="item-desc">Dúvidas respondidas em até 24h</span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="offer-block bonus-block">
+                <span class="block-title bonus-title">🎁 BÔNUS EXCLUSIVO</span>
+                <ul class="check-list">
+                    <li>
+                        <span class="check-icon">+</span>
+                        <div>
+                            <strong>Lista de 50 Fornecedores</strong>
+                            <span class="item-desc">Acesso com preços especiais</span>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="check-icon">+</span>
+                        <div>
+                            <strong>Mentoria em Grupo</strong>
+                            <span class="item-desc">Aulas ao vivo todo mês</span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <span class="price-label">PREÇO NORMAL: R$ 127</span>
+            <div class="price-value">R$ 37,90</div>
+            <span class="price-info">Parcelado em 3x de R$ 12,63 ou à vista</span>
+
+            <button class="cta-button" style="width: 100%; margin-top: 0;">
+                ➤ GARANTIR MEU ACESSO AGORA
+            </button>
+
+            <div style="margin-top: 18px; color: rgb(156, 163, 175); font-size: 0.8rem; display: flex; align-items: center; justify-content: center; gap: 8px;">
+                🛡️ Garantia de 30 dias ou seu dinheiro de volta
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq-section">
+        <span class="label">DÚVIDAS FREQUENTES</span>
+        <h2 class="section-title">Perguntas <em>Comuns</em></h2>
+
+        <div class="faq-inner">
+            <div class="faq-item">
+                <button class="faq-question">
+                    Preciso de experiência anterior?
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    Não! O curso foi desenvolvido para iniciantes completos. Se você consegue seguir instruções, consegue fazer funcionar.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    Quanto preciso investir para começar?
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    Você pode começar com R$ 500 a R$ 1.000 para o estoque inicial. A maioria dos alunos recupera esse investimento na primeira semana de vendas.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    Como funciona o suporte?
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    Você tem acesso a um grupo privado no WhatsApp/Telegram, e pode fazer perguntas que são respondidas por especialistas em até 24 horas.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    Posso começar agora mesmo?
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    Sim! Você recebe acesso imediato após a compra. Pode começar a assistir os módulos em menos de 5 minutos.
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FINAL CTA -->
+    <section class="final-cta">
+        <h2>Não espere mais. <em>Comece hoje</em> sua jornada para a liberdade financeira!</h2>
+        <p>Cada dia que você espera é um dia sem ganhar essa renda extra que pode transformar sua vida</p>
+        <button class="cta-button">➤ QUERO GANHAR R$ 2-5 MIL/MÊS AGORA</button>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>© 2024 Açaí Que Dá Dinheiro. Todos os direitos reservados.</p>
+        <p>Este produto é vendido como é, sem garantias explícitas ou implícitas.</p>
+    </footer>
+
+    <!-- STICKY BAR FLUTUANTE -->
+    <div class="sticky-bar">
+        <div class="sticky-text">Aproveite agora: <span>37,90 reais apenas</span></div>
+        <button class="sticky-btn" onclick="document.querySelector('.offer-box').scrollIntoView({behavior: 'smooth'})">
+            ➤ COMPRAR AGORA
+        </button>
+    </div>
+
+    <script>
+        // FAQ interativo
+        document.querySelectorAll('.faq-question').forEach(button => {
+            button.addEventListener('click', () => {
+                const item = button.closest('.faq-item');
+                item.classList.toggle('open');
+            });
+        });
+    </script>
+</body>
+</html>
